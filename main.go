@@ -2,19 +2,25 @@ package main
 
 import "fmt"
 
-type Jogador struct {
-	nome string
-	vida int
-	nivel int
+type Carro struct {
+	modelo string
+	ano int
+	velocidade int
 }
 
-func exibirDados(j Jogador) {
-	fmt.Println("Nome:", j.nome)
-	fmt.Println("Vida:", j.vida)
-	fmt.Println("Nivel:", j.nivel)
+
+
+func exibirDados(c Carro) {
+	fmt.Println("\nModelo:", c.modelo)
+	fmt.Println("Ano:", c.ano)
+	fmt.Println("Velocidade máxima:", c.velocidade, "\n")
 }
 
 func main() {
-	j1 := Jogador{"Sim", 100, 1}
-	exibirDados(j1)
+	c1 := Carro{"Onix", 2013, 167}
+	c2 := Carro{"Tesla Cybertruck", 2023, 209}
+	c3 := Carro{"Celta", 2006, 157}
+	exibirDados(c1)
+	exibirDados(c2)
+	exibirDados(c3)
 }
